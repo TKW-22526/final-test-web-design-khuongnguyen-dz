@@ -8,19 +8,95 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
-   <script src="../js/script.js"></script>
+    <script src="../js/script.js"></script>
+
+    <style>
+        .search-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 500px;
+            margin: 20px auto 30px auto; /* Căn giữa và tạo khoảng cách */
+            padding: 0 15px;
+        }
+
+        #search-input {
+            width: 100%;
+            padding: 10px 15px;
+            font-size: 16px;
+            border: 2px solid #e0e0e0;
+            border-right: none;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        #search-input:focus {
+            border-color: #3b82f6; /* Đổi màu xanh khi click vào */
+        }
+
+        .search-btn {
+            padding: 10px 20px;
+            background-color: #3b82f6; 
+            border: 2px solid #3b82f6;
+            color: white;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-btn:hover {
+            background-color: #2563eb;
+            border-color: #2563eb;
+        }
+    </style>
 </head>
 <body>
     <div class="container mt-5">
         <h2 class="text-center mb-4 text-primary fw-bold">Danh Sách Sản Phẩm Capybara</h2>
         
-        <div id="product-list" class="row">
-            </div>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Tìm kiếm sản phẩm Capybara..." onkeyup="filterProducts()">
+            <button class="search-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg>
+            </button>
+        </div>
+        
+        <div id="product-list" class="row"></div>
     </div>
 
     <script>
-        
+        // Gọi hàm tải sản phẩm từ file script.js của bạn
         loadAllproducts();
+
+        // Hàm xử lý tìm kiếm sản phẩm thực tế
+        function filterProducts() {
+            // 1. Lấy từ khóa người dùng gõ
+            let keyword = document.getElementById('search-input').value.toLowerCase();
+            
+            // 2. Tìm danh sách sản phẩm bên trong thẻ #product-list
+            // Mẹo: Bootstrap thường sinh ra các thẻ có class là 'col-md-4' hoặc 'col-12' làm khung bọc ngoài sản phẩm
+            let productItems = document.querySelectorAll('#product-list > div');
+
+            productItems.forEach(item => {
+                // Tìm thẻ tiêu đề chứa tên sản phẩm bên trong ô (Thường là thẻ h3, h5 hoặc class chứa chữ 'title/name')
+                // Code này sẽ tự quét văn bản text có chứa từ khoá tìm kiếm không
+                let itemText = item.innerText.toLowerCase();
+                
+                if (itemText.includes(keyword)) {
+                    item.style.display = ""; // Hiển thị lại nếu khớp từ khóa
+                } else {
+                    item.style.display = "none"; // Ẩn đi nếu không chứa từ khóa
+                }
+            });
+        }
     </script>
 </body>
 </html>
