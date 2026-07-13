@@ -10,22 +10,128 @@
     
     <style>
         body {
-            background-color: #eef5ed;
+            background: url('../assets/image/capybara11.webp') no-repeat center center fixed;
+            background-size: cover;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .custom-card {
+            background: rgba(255, 255, 255, 0.88) !important;
+            backdrop-filter: blur(10px);
+            border-radius: 20px !important;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            overflow: hidden;
+        }
+
+        #product-detail img {
+            width: 100%;
+            height: auto;
+            max-height: 350px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        /* CSS định dạng các nút bấm đồng bộ */
+        .btn-custom {
+            font-weight: 600;
+            border-radius: 50px;
+            padding: 10px 25px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-custom:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-cart {
+            background-color: #2dbc51;
+            color: white;
+            border: none;
+        }
+
+        .btn-cart:hover {
+            background-color: #25a043;
+            color: white;
+        }
+
+        .btn-buy {
+            background-color: #198754;
+            color: white;
+            border: none;
+        }
+
+        .btn-buy:hover {
+            background-color: #146c43;
+            color: white;
+        }
+
+        .btn-back {
+            background-color: #6c757d;
+            color: white;
+            border: none;
+        }
+
+        .btn-back:hover {
+            background-color: #5a6268;
+            color: white;
         }
     </style>
 </head>
 <body>
-    <div class="container mt-5">
+    <div class="container my-5">
         <div class="row justify-content-center">
-            <div class="col-md-8 col-lg-6">
-                <div id="product-detail" class="card p-4 shadow-sm border-0">
-                    <p class="text-center text-muted">Đang tải dữ liệu sản phẩm...</p>
+            <div class="col-md-10 col-lg-9">
+                
+                <div class="card p-4 border-0 custom-card">
+                    
+                    <!-- Vùng dành cho JS đổ dữ liệu sản phẩm -->
+                    <div id="product-detail" class="mb-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-5 text-center mb-3 mb-md-0">
+                                <div class="bg-light d-flex align-items-center justify-content-center" style="height: 280px; border-radius: 12px;">
+                                    <p class="text-muted">Đang tải hình ảnh...</p>
+                                </div>
+                            </div>
+                            <div class="col-md-7 text-start">
+                                <h2 class="fw-bold text-success mb-3">Tên sản phẩm Capybara</h2>
+                                <h4 class="text-danger fw-bold mb-3">000.000 đ</h4>
+                                <p class="text-muted mb-4">Đang tải mô tả chi tiết của sản phẩm từ hệ thống dữ liệu...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Đường gạch ngang nhẹ phân cách nội dung và hàng nút bấm -->
+                    <hr class="text-muted opacity-25 mb-4">
+
+                    <!-- Cụm 3 nút nằm CÙNG MỘT HÀNG và CĂN LỀ GIỮA -->
+                    <div class="row">
+                        <div class="col-12 d-flex flex-wrap justify-content-center gap-3">
+                            <!-- Nút thoát / Quay lại danh sách -->
+                            <a href="san-pham.html" class="btn btn-custom btn-back">
+                                ⬅ Quay lại danh sách
+                            </a>
+
+                            <!-- Nút bỏ vào giỏ hàng kèm thông báo -->
+                            <button class="btn btn-custom btn-cart" onclick="alert('Đã bỏ vào giỏ hàng thành công!')">
+                                🛒 Bỏ vào giỏ hàng
+                            </button>
+
+                            <!-- Nút mua ngay kèm thông báo hết hàng -->
+                            <button class="btn btn-custom btn-buy" onclick="alert('Hết hàng rồi bé ơi')">
+                                💳 Mua ngay
+                            </button>
+                        </div>
+                    </div>
+
                 </div>
                 
-                <div class="mt-3 text-center">
-                    <a href="san-pham.html" class="btn btn-success">⬅ Quay lại danh sách</a>
-                </div>
             </div>
         </div>
     </div>
