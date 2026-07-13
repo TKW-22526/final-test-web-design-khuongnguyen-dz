@@ -1,92 +1,90 @@
-// 1. Mảng dữ liệu 6 chú Capybara khớp theo hình ảnh của bạn
 const products = [
     {
         id: 1,
         ten: "Capybara Hôn chụt chụt",
-        gia: "300đ/Hình",
+        gia: "150.000đ/Tranh",
         mota: "Khoảnh khắc siêu ngọt ngào và đáng yêu của hai chú chuột Capybara đang thơm nhau. Thích hợp làm quà tặng cho các cặp đôi hoặc trang trí phòng ngủ lãng mạn.",
         hinhanh: "assets/image/capybara1.webp"
     },
     {
         id: 2,
         ten: "Capybara suy tình",
-        gia: "350đ/Hình",
+        gia: "180.000đ/Tranh",
         mota: "Chú chuột bộ dáng cô đơn đang lặng lẽ ngắm nhìn mặt nước bình yên, mang đậm bầu không khí suy tư, trầm mặc cho những ngày đầy tâm trạng.",
         hinhanh: "assets/image/capybara2.webp"
     },
     {
         id: 3,
         ten: "Capybara chuẩn dáng",
-        gia: "350đ/Hình",
+        gia: "180.000đ/Tranh",
         mota: "Bức ảnh bắt trọn góc đứng nghiêng đầy thần thái của bộ trưởng bộ ngoại giao làng động vật. Phong thái ung dung, tự tại không lẫn vào đâu được.",
         hinhanh: "assets/image/capybara3.webp"
     },
     {
         id: 4,
         ten: "Gia đình Capybara",
-        gia: "350đ/Hình",
+        gia: "220.000đ/Tranh",
         mota: "Hình ảnh cả gia đình Capybara đang cùng nhau ngâm mình thư giãn dưới dòng nước mát, biểu tượng cho sự gắn kết, ấm áp và hạnh phúc gia đình.",
         hinhanh: "assets/image/capybara4.webp"
     },
     {
         id: 5,
         ten: "Capybara selfie",
-        gia: "350đ/Hình",
+        gia: "120.000đ/Tranh",
         mota: "Góc chụp cận mặt bá đạo cận cảnh nét mặt nghiêm túc nhưng lại vô cùng hài hước của chú Capybara, tạo điểm nhấn vui nhộn cho không gian làm việc.",
         hinhanh: "assets/image/capybara5.webp"
     },
-     {
+    {
         id: 7,
         ten: "Capybara Nuông Chiều",
-        gia: "320đ/Hình",
+        gia: "160.000đ/Tranh",
         mota: "Khoảnh khắc đáng yêu khi bộ trưởng được nhân viên chăm sóc tận tình đút từng miếng dưa hấu mát lạnh. Bức ảnh mang lại cảm giác được nuông chiều và thư giãn tuyệt đối.",
         hinhanh: "assets/image/capybara7.webp"
     },
-     {
+    {
         id: 8,
         ten: "Capybara Ngủ Nướng",
-        gia: "300đ/Hình",
+        gia: "150.000đ/Tranh",
         mota: "Góc chụp cận cảnh đàn Capybara đang chìm vào giấc ngủ say nồng, lười biếng đè lên nhau. Một bức tranh hoàn hảo để tiếp thêm năng lượng vô tri cho những ngày cuối tuần.",
         hinhanh: "assets/image/capybara8.webp"
     },
-     {
+    {
         id: 9,
         ten: "Capybara Tắm Khử Thâm",
-        gia: "300đ/Hình",
+        gia: "190.000đ/Tranh",
         mota: "Bức ảnh bắt trọn khoảnh khắc chú chuột lội nước chill chill bên cạnh những quả quả quýt thả bồn đúng chuẩn phong cách Nhật Bản. Giúp giải tỏa mọi áp lực ngay khi nhìn vào.",
         hinhanh: "assets/image/capybara9.webp"
     },
-     {
+    {
         id: 10,
         ten: "Capybara Hướng Về Tương Lai",
-        gia: "300đ/Hình",
+        gia: "175.000đ/Tranh",
         mota: "Hai chú Capybara cùng nhau đứng trên đỉnh đồi lộng gió, ngước mắt nhìn về một phương xa xăm đầy hoài bão. Phong cảnh tối giản, mang chiều sâu nghệ thuật tinh tế.",
         hinhanh: "assets/image/capybara10.webp"
     },
-     {
+    {
         id: 11,
         ten: "Đại Gia Đình Capybara",
-        gia: "300đ/Hình",
+        gia: "250.000đ/Tranh",
         mota: "Bức ảnh sum vầy của cả một đại gia đình chuột lang nước trên bãi cỏ xanh mướt. Thích hợp để trang trí phòng khách nhằm tạo không khí ấm cúng, gắn kết thành viên.",
         hinhanh: "assets/image/capybara11.webp"
     },
-     {
+    {
         id: 12,
         ten: "Capybara Hảo Hán",
-        gia: "300đ/Hình",
+        gia: "140.000đ/Tranh",
         mota: "Dáng đứng hiên ngang, độc hành giữa thiên nhiên hoang dã đầy bản lĩnh của một chú Capybara trưởng thành. Thần thái lạnh lùng, phong trần nhưng không kém phần hài hước.",
         hinhanh: "assets/image/capybara12.webp"
     },
     {
         id: 6,
         ten: "Capybara Đội Đồ Ăn",
-        gia: "400đ/Hình",
+        gia: "200.000đ/Tranh",
         mota: "Góc nghiêng thần thánh kết hợp cùng chiếc mũ đồ ăn độc lạ trên đầu. Biểu cảm bất biến giữa dòng đời vạn biến, mang lại nguồn năng lượng tích cực mỗi ngày.",
         hinhanh: "assets/image/capybara6.jpg"
     }
 ];
 
-// 2. Hàm đổ danh sách ra trang san-pham.html
 function loadAllproducts() {
     const listContainer = document.getElementById("product-list");
     if (!listContainer) return;
@@ -110,7 +108,6 @@ function loadAllproducts() {
     listContainer.innerHTML = htmlContent;
 }
 
-// 3. Hàm đổ chi tiết ra trang chi-tiet.html
 function loadProductDetail() {
     const detailContainer = document.getElementById("product-detail");
     if (!detailContainer) return;

@@ -4,13 +4,12 @@
     <title>Trang Chủ - Capybara Tranh Shop</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <style>
-        /* Giao diện nền chuyển màu mượt mà */
         body {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: url('assets/image/bg-capybara.webp') no-repeat center center fixed;
+            background-size: cover;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -18,10 +17,10 @@
         }
 
         .hero-section {
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.85);
             padding: 50px;
             border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
             backdrop-filter: blur(10px);
         }
 
@@ -37,24 +36,24 @@
         }
 
         .btn-enter-shop {
-            background-color: #3b82f6;
+            background-color: #28a745;
             color: white;
             font-size: 1.2rem;
             font-weight: 600;
             padding: 12px 35px;
             border-radius: 50px;
             border: none;
-            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
             transition: all 0.3s ease;
-            text-decoration: none; /* Bỏ gạch chân của thẻ a */
+            text-decoration: none; 
             display: inline-block;
         }
 
         .btn-enter-shop:hover {
-            background-color: #2563eb;
+            background-color: #218838;
             color: white;
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
+            box-shadow: 0 6px 20px rgba(33, 136, 56, 0.6);
         }
 
         .capy-logo {
@@ -73,7 +72,7 @@
             <div class="col-md-8 col-lg-6">
                 
                 <div class="hero-section">
-                    <img src="assets/image/capybara2.webp" alt="Capybara Logo" class="capy-logo">
+                    <img src="assets/image/avt-capybara.webp" alt="Capybara Logo" class="capy-logo">
                     
                     <div class="shop-badge">Chào mừng tới hội ghiền Capybara</div>
                     
@@ -81,8 +80,8 @@
                     
                     <p class="text-muted fs-5 mb-5">
                         Nơi lưu trữ và cung cấp những khoảnh khắc hài hước, suy tình và ung dung nhất của "bộ trưởng bộ ngoại giao" làng động vật.
-                    <p>Nguyễn Quốc Huy Khương MSSV:110125093</p> 
                     </p>
+                    <p class="text-muted">Nguyễn Quốc Huy Khương MSSV:110125093</p> 
                     
                     <a href="html/san-pham.html" class="btn-enter-shop">
                         Khám Phá Cửa Hàng 
