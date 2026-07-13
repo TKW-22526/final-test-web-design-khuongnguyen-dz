@@ -35,18 +35,22 @@
             margin-bottom: 20px;
         }
 
-        .btn-enter-shop {
-            background-color: #28a745;
-            color: white;
-            font-size: 1.2rem;
+        .btn-action {
+            font-size: 1.05rem;
             font-weight: 600;
-            padding: 12px 35px;
+            padding: 12px 25px;
             border-radius: 50px;
             border: none;
-            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
             transition: all 0.3s ease;
             text-decoration: none; 
             display: inline-block;
+            margin: 5px;
+        }
+
+        .btn-enter-shop {
+            background-color: #28a745;
+            color: white;
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
         }
 
         .btn-enter-shop:hover {
@@ -54,6 +58,33 @@
             color: white;
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(33, 136, 56, 0.6);
+        }
+
+        .btn-about {
+            background-color: #0284c7;
+            color: white;
+            box-shadow: 0 4px 15px rgba(2, 132, 199, 0.4);
+        }
+
+        .btn-about:hover {
+            background-color: #0369a1;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(3, 105, 161, 0.6);
+        }
+
+        /* Định dạng nút liên hệ mới */
+        .btn-contact {
+            background-color: #f59e0b;
+            color: white;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+        }
+
+        .btn-contact:hover {
+            background-color: #d97706;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(217, 119, 6, 0.6);
         }
 
         .capy-logo {
@@ -69,7 +100,7 @@
 
     <div class="container">
         <div class="row justify-content-center text-center">
-            <div class="col-md-8 col-lg-6">
+            <div class="col-md-9 col-lg-8">
                 
                 <div class="hero-section">
                     <img src="assets/image/avt-capybara.webp" alt="Capybara Logo" class="capy-logo">
@@ -78,14 +109,24 @@
                     
                     <h1 class="fw-bold text-dark mb-3">Thế Giới Tranh Capybara Siêu Đáng Yêu</h1>
                     
-                    <p class="text-muted fs-5 mb-5">
+                    <p class="text-muted fs-5 mb-4">
                         Nơi lưu trữ và cung cấp những khoảnh khắc hài hước, suy tình và ung dung nhất của "bộ trưởng bộ ngoại giao" làng động vật.
                     </p>
-                    <p class="text-muted">Nguyễn Quốc Huy Khương MSSV:110125093</p> 
                     
-                    <a href="html/san-pham.html" class="btn-enter-shop">
-                        Khám Phá Cửa Hàng 
-                    </a>
+                    <p class="text-muted fw-semibold mb-4">Nguyễn Quốc Huy Khương MSSV: 110125093</p> 
+                    
+                    <!-- Khối chứa 3 nút điều hướng chạy ngang hàng mượt mà -->
+                    <div class="d-flex flex-wrap justify-content-center gap-1">
+                        <a href="gioi-thieu.html" class="btn-action btn-about">
+                            👤 Giới Thiệu
+                        </a>
+                        <a href="html/san-pham.html" class="btn-action btn-enter-shop">
+                            🛒 Khám Phá Cửa Hàng 
+                        </a>
+                        <a href="html/lien-he.html" class="btn-action btn-contact">
+                            📞 Liên Hệ Ngay
+                        </a>
+                    </div>
                 </div>
                 
             </div>

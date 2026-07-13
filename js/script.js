@@ -99,7 +99,7 @@ function loadAllproducts() {
                     <h3 class="h5 text-danger fw-bold">${product.ten}</h3>
                     <p class="fw-bold text-success">${product.gia}</p>
                     <p class="text-muted small flex-grow-1">${product.mota}</p>
-                    <a href="../js/chi-tiet.html?id=${product.id}" class="btn btn-primary btn-sm w-100 mt-2">Xem chi tiết</a>
+                    <a href="chi-tiet.html?id=${product.id}" class="btn btn-primary btn-sm w-100 mt-2">Xem chi tiết</a>
                 </div>
             </div>
         `;

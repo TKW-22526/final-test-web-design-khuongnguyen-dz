@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>Giới Thiệu Bản Thân - Khương</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            background: url('../assets/image/capybara11.webp') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .profile-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.4);
+        }
+
+        .avatar-box img {
+            max-width: 150px;
+            border-radius: 50%;
+            border: 4px solid #28a745;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .info-table td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        .info-table td:first-child {
+            font-weight: 600;
+            color: #2b7a42;
+            width: 40%;
+        }
+
+        .btn-custom {
+            font-weight: 600;
+            padding: 10px 25px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-home {
+            background-color: #4a9b4a;
+            color: white;
+        }
+
+        .btn-home:hover {
+            background-color: #5a6268;
+            color: white;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <div class="col-md-8 col-lg-6">
+                
+                <div class="profile-card">
+                    <div class="avatar-box mb-3">
+                        <img src="../assets/image/avt.jpg" alt="Avatar">
+                    </div>
+                    
+                    <h2 class="fw-bold text-dark mb-4">Thông Tin Sinh Viên</h2>
+                    
+                    <table class="table table-borderless info-table mb-4">
+                        <tbody>
+                            <tr>
+                                <td>Họ và Tên:</td>
+                                <td>Nguyễn Quốc Huy Khương</td>
+                            </tr>
+                            <tr>
+                                <td>Mã số sinh viên:</td>
+                                <td>110125093</td>
+                            </tr>
+                            <tr>
+                                <td>Lớp học:</td>
+                                <td>DA25TTA</td>
+                            </tr>
+                            <tr>
+                                <td>Trường:</td>
+                                <td>Đại học Trà Vinh (TVU)</td>
+                            </tr>
+                            <tr>
+                                <td>Sở thích:</td>
+                                <td>Bóng chuyền, Chạy bộ thể thao, Gaming</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="mt-4">
+                        <a href="../index.html" class="btn-custom btn-home">
+                            🏠 Về Trang Chủ
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -5,34 +5,38 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <!-- CSS Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- JS Bootstrap 5 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- SỬA TẠI ĐÂY: Thay đổi từ lib.js thành script.js vì file cũ không còn tồn tại -->
-    <script src="./script.js"></script>
+    <style>
+        body {
+            background-color: #eef5ed;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
 </head>
 <body>
     <div class="container mt-5">
         <div class="row justify-content-center">
-            <div class="col-md-6">
-                <!-- Khu vực hiển thị thông tin chi tiết -->
-                <div id="product-detail" class="card p-4 shadow-sm">
+            <div class="col-md-8 col-lg-6">
+                <div id="product-detail" class="card p-4 shadow-sm border-0">
                     <p class="text-center text-muted">Đang tải dữ liệu sản phẩm...</p>
                 </div>
                 
-                <!-- Nút quay lại trang danh sách sản phẩm -->
                 <div class="mt-3 text-center">
-                    <a href="../html/san-pham.html" class="btn btn-secondary">⬅ Quay lại danh sách</a>
+                    <a href="san-pham.html" class="btn btn-success">⬅ Quay lại danh sách</a>
                 </div>
             </div>
         </div>
     </div>
 
+    <script src="../js/script.js?v=2"></script>
     <script>
-        // Gọi hàm load chi tiết sản phẩm
-        loadProductDetail();
+        if (typeof loadProductDetail === 'function') {
+            loadProductDetail();
+        } else if (typeof loadProductdetails === 'function') {
+            loadProductdetails();
+        }
     </script>
 </body>
 </html>
